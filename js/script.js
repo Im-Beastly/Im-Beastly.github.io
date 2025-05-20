@@ -26,6 +26,16 @@ const url = 'https://www.google.com/maps/search/?api=1&query=barnathiddenridge';
 window.open(url, '_blank');
 });
 }
+
+function setupOpenRegistryButton() {
+  const registryBtn = document.querySelector('#open-registry');
+if (!registryBtn) return;
+registryBtn.addEventListener('click', () => {
+const url = 'https://www.amazon.com/wedding/registry/3921HTI4PC24Y';
+window.open(url, '_blank');
+});
+}
+
 /**
  * preloadBackgroundImage: Lazy-loads a background image after window.load.
  */
@@ -43,7 +53,7 @@ function preloadBackgroundImage() {
 document.addEventListener('DOMContentLoaded', () => {
   setupSmoothNavigation();
   setupGetDirectionsButton();
-  setupRegistryButton();
+  setupOpenRegistryButton();
 });
 
 // Lazy-load background on window load
